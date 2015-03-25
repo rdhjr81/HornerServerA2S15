@@ -136,7 +136,7 @@ public class HornerServerA2S15 {
             fileSize = -1;
             String fileSizeString = Long.toString(fileSize);
             
-            DatagramPacket sPacket = new DatagramPacket(fileSizeString.getBytes(), 64, cAddress, cPort);
+            DatagramPacket sPacket = new DatagramPacket(fileSizeString.getBytes(), fileSizeString.getBytes().length, cAddress, cPort);
             serverSocket.send(sPacket);
             System.err.println("Ending Server...");
             System.exit(0);
